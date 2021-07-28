@@ -17,6 +17,7 @@ func Init(r *gin.Engine) {
 
 	r.GET("/", controller.Dashboard)
 	r.POST("/transaksi", controller.Transaksi)
+	r.POST("/bayar", controller.BayarPesanan)
 }
 
 func error404(c *gin.Context) {

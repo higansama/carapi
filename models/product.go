@@ -78,7 +78,7 @@ func BuatTransaksi(idvariant, qty, alamat, nama_pembeli string) (map[string]inte
 	return map[string]interface{}{"id_transaksi": transaksi}, err
 }
 
-func UpdateTransaksi(id_transaksi, status string) (bool, err) {
+func UpdateTransaksi(id_transaksi, status string) (bool, error) {
 	db := framework.Database{}
 	defer db.Close()
 
